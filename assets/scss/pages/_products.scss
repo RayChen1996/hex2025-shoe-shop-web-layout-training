@@ -1,6 +1,7 @@
 .breadcrumb {
   max-width: 1296px;
   margin: 0 auto;
+  margin-top: 32px;
 }
 
 .product-list-container {
@@ -66,7 +67,7 @@
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
   gap: 24px;
 }
 
@@ -129,4 +130,10 @@
   border-radius: 5px;
   margin: 24px 0 24px 0;
   padding: 12px 24px 12px 24px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
 }

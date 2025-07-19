@@ -1,0 +1,116 @@
+.login {
+  .content {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    .login-image {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+
+  .right {
+    flex: 1;
+    background-color: #f2f4f4;
+    padding: 32px;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 32px;
+
+    .tab {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      width: 50%;
+
+      &.active {
+        font-weight: bold;
+        border-bottom: 2px solid #212529;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .btn {
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+
+      border-color: $Neutral-300;
+      background-color: #fff;
+      &.facebook {
+        color: $Neutral-900;
+        border: 1px solid;
+      }
+
+      &.apple {
+        color: $Neutral-900;
+        border: 1px solid;
+      }
+
+      &.google {
+        color: $Neutral-900;
+        border: 1px solid;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    .left {
+      .login-image {
+        width: 100%;
+        border-radius: 0px;
+      }
+    }
+    .right {
+      background-color: #fff;
+      border-radius: 0px;
+      text-align: center;
+      width: 50%;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 32px;
+
+      .tab {
+        cursor: pointer;
+
+        &.active {
+          font-weight: bold;
+          border-bottom: 2px solid #212529;
+        }
+      }
+    }
+  }
+}

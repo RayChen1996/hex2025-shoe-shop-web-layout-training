@@ -19,3 +19,29 @@
     padding: 12px 24px 12px 24px;
   }
 }
+
+.top_banner {
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true");
+  background-position: center center;
+  background-size: cover;
+  min-height: 800px;
+  padding: 0 200px 0 200px;
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    line-height: 1.2;
+    color: #fff;
+    font-style: 64px;
+  }
+  p {
+    line-height: 1.2;
+    color: #fff;
+    font-weight: bold;
+    font-style: 28px;
+  }
+  button {
+    display: block;
+  }
+}
