@@ -76,7 +76,32 @@
   }
 
   .description {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    gap: 16px;
+    background-color: #f5fee7;
+    padding: 16px;
+    align-items: center;
+    .text {
+      color: #57a203;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .favorite-list {
+    .item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 16px;
+
+      .price {
+        font-weight: bold;
+        white-space: nowrap;
+      }
+    }
   }
 }

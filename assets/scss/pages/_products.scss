@@ -63,17 +63,19 @@
 
 .products {
   flex: 1;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
-  gap: 24px;
-}
-
-.card {
-  border-radius: 8px;
-  cursor: pointer;
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
+    gap: 24px;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    .card {
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
 }
 
 .product-img {
@@ -132,8 +134,18 @@
   padding: 12px 24px 12px 24px;
 }
 
+.probably-like {
+  margin: 48px 0 48px 0;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     display: none;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    list-style: none;
   }
 }

@@ -167,6 +167,19 @@
 
 .probably-like {
   margin: 48px 0 48px 0;
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
+    gap: 24px;
+    list-style: none;
+    a {
+      text-decoration: none;
+    }
+    .card {
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
 }
 
 .probably-like h2 {
@@ -174,4 +187,30 @@
   font-style: 24px;
   line-height: 1.2;
   margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .product-images {
+    grid-template-columns: 1fr; // 一欄一張圖
+  }
+
+  .sizes {
+    grid-template-columns: repeat(2, 1fr); // 排列更適合手機寬度
+  }
+
+  .product-actions {
+    flex-direction: column;
+    button {
+      width: 100%;
+    }
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; // 單欄排版
+  }
 }

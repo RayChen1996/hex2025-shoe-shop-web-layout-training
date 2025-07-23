@@ -1,47 +1,309 @@
-.index-title {
-  font-size: 100px;
-}
-
-.member-promo {
-  background: #d8ff9c;
-
-  text-align: center;
+.header-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 24px;
-  button {
-    background: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin: 24px 0 24px 0;
-    padding: 12px 24px 12px 24px;
-  }
 }
 
-.top_banner {
-  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true");
-  background-position: center center;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #c6ff00;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: #c6ff00;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #b3e600;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true")
+      no-repeat center center;
   background-size: cover;
   min-height: 800px;
-  padding: 0 200px 0 200px;
-  display: flex;
+  color: white;
+  position: relative;
+  padding-top: 289px;
+}
 
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.hero-content .tagline {
+  font-size: 24px;
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-sm.png?raw=true");
+    min-height: 480px;
+    padding: 60px 0;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content .tagline {
+    font-size: 18px;
+  }
+}
+
+/* Section Styles */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 48px;
+  color: #000;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 18px;
+  color: #666;
+  font-weight: normal;
+  margin-top: 8px;
+}
+
+/* New Arrivals Section */
+.new-arrivals {
+  background: #fff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.product-card {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 16px 0 8px;
+  color: #000;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #666;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product-image {
+    height: 200px;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 14px;
+  }
+}
+
+/* Collaboration Banner */
+.collaboration-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-co-branded.png?raw=true")
+      no-repeat center center;
+  background-size: cover;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  h2 {
-    line-height: 1.2;
-    color: #fff;
-    font-style: 64px;
+  text-align: center;
+  color: white;
+}
+
+.collab-content h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.collab-content .brand-x {
+  color: #c6ff00;
+  font-size: 42px;
+  margin: 0 12px;
+}
+
+.collab-content .subtitle {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.collab-content .description {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .collaboration-banner {
+    min-height: 300px;
+    padding: 40px 20px;
   }
-  p {
-    line-height: 1.2;
-    color: #fff;
-    font-weight: bold;
-    font-style: 28px;
+
+  .collab-content h2 {
+    font-size: 24px;
   }
-  button {
-    display: block;
+
+  .collab-content .brand-x {
+    font-size: 28px;
   }
+
+  .collab-content .subtitle {
+    font-size: 16px;
+  }
+
+  .collab-content .description {
+    font-size: 14px;
+  }
+}
+
+/* Style Gallery */
+.style-gallery {
+  background: #f8f9fa;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.gallery-item {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}
+
+/* Member Promo */
+.member-promo {
+  background: linear-gradient(135deg, #eaffc2, #d4f294);
+  text-align: center;
+  padding: 48px 0;
+}
+
+.promo-text {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .promo-text {
+    font-size: 18px;
+  }
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 0.8s ease-out;
 }
