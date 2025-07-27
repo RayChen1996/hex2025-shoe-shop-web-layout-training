@@ -208,6 +208,16 @@
       position: relative;
       display: block;
       width: 100%;
+
+      .bg-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); // 40% 黑色透明遮罩
+        pointer-events: none; // 不干擾點擊
+      }
     }
 
     .img-mask img {
@@ -215,16 +225,6 @@
       width: 100%;
       height: auto;
       object-fit: cover;
-    }
-
-    .bg-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4); // 40% 黑色透明遮罩
-      pointer-events: none; // 不干擾點擊
     }
 
     .series-text {
@@ -236,6 +236,9 @@
       color: #fff;
       text-align: center;
       font-size: 28px;
+      @include rwd(sm) {
+        font-size: 16px;
+      }
     }
 
     .product-card {
@@ -266,12 +269,6 @@
 }
 
 @media (max-width: 768px) {
-  // .product-grid {
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  //   gap: 16px;
-  // }
-
   .product-name {
     font-size: 16px;
   }
