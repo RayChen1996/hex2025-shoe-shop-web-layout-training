@@ -5,11 +5,11 @@
     display: flex;
     gap: 16px;
     justify-content: center;
+    align-items: center;
   }
   .description {
     display: flex;
     gap: 16px;
-    background-color: #f5fee7;
     padding: 16px;
     .text {
       color: #57a203;
@@ -78,7 +78,6 @@
   .description {
     display: flex;
     gap: 16px;
-    background-color: #f5fee7;
     padding: 16px;
     align-items: center;
     .text {

@@ -166,7 +166,6 @@
 }
 
 .probably-like {
-  margin: 48px 0 48px 0;
   .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
@@ -183,9 +182,7 @@
 }
 
 .probably-like h2 {
-  font-weight: 700;
   font-style: 24px;
-  line-height: 1.2;
   margin-bottom: 16px;
 }
 

@@ -1,4 +1,11 @@
+.login-m-bg {
+  display: none;
+}
 .login {
+  margin-top: 64px;
+  .login-pc-bg {
+    display: block;
+  }
   .content {
     display: flex;
     gap: 32px;
@@ -9,23 +16,21 @@
     }
   }
 
-  .left {
+  .login-head {
     flex: 1;
     display: flex;
     justify-content: center;
-
-    .login-image {
-      width: 100%;
-      border-radius: 8px;
-    }
   }
 
-  .right {
+  .login-content {
     flex: 1;
     background-color: #f2f4f4;
     padding: 32px;
     border-radius: 8px;
     text-align: center;
+    .title {
+      font-size: 24px;
+    }
   }
 
   .tabs {
@@ -39,6 +44,7 @@
       padding: 0.5rem 1rem;
       cursor: pointer;
       width: 50%;
+      margin-top: 24px;
 
       &.active {
         font-weight: bold;
@@ -82,33 +88,38 @@
 }
 
 @media (max-width: 768px) {
+  .login-m-bg {
+    display: block;
+  }
   .login {
-    .left {
+    .login-pc-bg {
+      display: none;
+    }
+    .login-head {
       .login-image {
         width: 100%;
-        border-radius: 0px;
       }
     }
-    .right {
-      background-color: #fff;
+    .login-content {
       border-radius: 0px;
       text-align: center;
-      width: 50%;
-    }
+      background-color: #fff;
+      width: 100%;
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 32px;
+        margin-top: 24px;
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 32px;
+        .tab {
+          cursor: pointer;
 
-      .tab {
-        cursor: pointer;
-
-        &.active {
-          font-weight: bold;
-          border-bottom: 2px solid #212529;
+          &.active {
+            font-weight: bold;
+            border-bottom: 2px solid #212529;
+          }
         }
       }
     }

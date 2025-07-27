@@ -19,8 +19,6 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/hero-sm.png?raw=true");
 
-  line-height: 1.2;
-  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +41,6 @@
   margin-bottom: 24px;
   margin-top: 24px;
   color: #212529;
-  font-weight: 700;
   font-size: 24px;
 }
 
@@ -63,7 +60,6 @@
 
   h3 {
     color: #212529;
-    font-weight: 700;
     font-size: 24px;
     margin-bottom: 24px;
   }
@@ -109,9 +105,7 @@
   margin: 64px 0 48px 0;
   h4 {
     color: #57a203;
-    font-weight: 700;
     font-size: 20px;
-    line-height: 1.2;
   }
   div {
     margin-top: 12px;
@@ -134,8 +128,6 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/hero-sm.png?raw=true");
 
-    line-height: 1.2;
-    font-weight: 700;
     h1 {
       font-size: 28px;
     }

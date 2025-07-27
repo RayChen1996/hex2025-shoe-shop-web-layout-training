@@ -13,8 +13,12 @@
 body {
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.5;
-  letter-spacing: 0.05rem;
-  color: map-get($color, n900);
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 12px;
 }
 
 h1,
