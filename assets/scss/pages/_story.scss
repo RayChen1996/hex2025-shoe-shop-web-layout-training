@@ -69,17 +69,22 @@
 
     li {
       list-style-type: disc;
+      margin-bottom: 12px;
     }
   }
   ul {
     li {
+      list-style-type: none;
+      margin-bottom: 12px;
+    }
+  }
+  ol {
+    li {
       margin-bottom: 0.75rem;
-      line-height: 1.5;
-      list-style: none;
     }
   }
 
-  ul li a {
+  ol li a {
     color: #4c9b1f;
     text-underline-offset: 8px;
   }
@@ -181,16 +186,17 @@
   }
 
   /* 設定列表內 SVG 與文字間距 */
-  .brand__section ul li a svg {
+  .brand__section ol li a svg {
     margin-right: 6px;
   }
 
-  .brand__section ul li {
+  .brand__section ol li {
     display: flex;
     align-items: center;
+    margin-bottom: 12px;
   }
 
-  .brand__section ul li a {
+  .brand__section ol li a {
     display: flex;
     align-items: center;
   }
