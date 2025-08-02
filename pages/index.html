@@ -19,8 +19,8 @@
 
     <div class="m-section-btns">
       <ul>
-        <li class="products"><a href="/shop">商品列表</a></li>
-        <li class="story"><a href="/register">品牌故事</a></li>
+        <li class="products"><a href="products.html">商品列表</a></li>
+        <li class="story"><a href="story.html">品牌故事</a></li>
       </ul>
     </div>
 
@@ -120,6 +120,50 @@
           />
         </li>
       </ul>
+      <div class="swiper inspiration-swiper mobile-only">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-card">
+              <span class="tag">人氣 No.1</span>
+              <img
+                src="../assets/images/hot1.png"
+                alt="人氣鞋款1"
+                class="product-image"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <span class="tag">人氣 No.2</span>
+              <img
+                src="../assets/images/hot2.png"
+                alt="人氣鞋款2"
+                class="product-image"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <span class="tag">人氣 No .3</span>
+              <img
+                src="../assets/images/hot3.png"
+                alt="人氣鞋款3"
+                class="product-image"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <span class="tag">人氣 No.4</span>
+              <img
+                src="../assets/images/hot4.png"
+                alt="人氣鞋款4"
+                class="product-image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Collaboration Banner -->
@@ -495,13 +539,8 @@
     </section>
 
     <!-- Member Promotion -->
-    <section class="member-promo">
-      <div class="container">
-        <p class="promo-text">加入會員獲得 9 折優惠</p>
-        <a href="/register" class="btn btn-secondary">馬上註冊</a>
-      </div>
-    </section>
-
+    <%- include('./layout/member-promo'); -%>
+    <!-- footer -->
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>

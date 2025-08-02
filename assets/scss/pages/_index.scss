@@ -108,6 +108,35 @@
   font-weight: 300;
 }
 
+.product-card {
+  position: relative;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+
+  width: calc(50% - 16px);
+  @include rwd(sm) {
+    width: calc(50% - 8px); // 手機時（gap: 16px）
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f5fee7;
+    color: #56a103;
+    font-size: 14px;
+    padding: 8px 12px;
+    line-height: 1.5;
+  }
+}
+
 @media (max-width: 768px) {
   .m-section-btns {
     display: block;
@@ -130,6 +159,7 @@
   padding: 64px 0;
   @include rwd(sm) {
     padding: 40px 0;
+    margin-top: 40px;
   }
 }
 
@@ -161,10 +191,22 @@
 }
 
 .product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  list-style: none;
+  a {
+    text-decoration: none;
+  }
+  .card {
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  @include rwd(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 }
 
 .product-image {
@@ -185,6 +227,9 @@
   font-size: 18px;
   color: #212529;
 }
+.product-card {
+  width: 100%;
+}
 .container {
   // 熱銷補貨
   .hot-products-grid {
@@ -193,6 +238,10 @@
     gap: 1rem;
     list-style: none;
     padding: 0;
+
+    @include rwd(sm) {
+      display: none;
+    }
 
     .img-mask {
       position: relative;
@@ -228,35 +277,6 @@
       font-size: 28px;
       @include rwd(sm) {
         font-size: 16px;
-      }
-    }
-
-    .product-card {
-      position: relative;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      padding: 1rem;
-      text-align: center;
-      width: calc(50% - 16px);
-      @include rwd(sm) {
-        width: calc(50% - 8px); // 手機時（gap: 16px）
-      }
-
-      .product-image {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-
-      .tag {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #f5fee7;
-        color: #56a103;
-        font-size: 14px;
-        padding: 8px 12px;
-        line-height: 1.5;
       }
     }
   }
@@ -376,20 +396,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
-}
-
-/* Member Promo */
-.member-promo {
-  background: linear-gradient(135deg, #eaffc2, #d4f294);
-  text-align: center;
-  padding: 48px 0;
-}
-
-.promo-text {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 24px;
-  color: #333;
 }
 
 @media (max-width: 768px) {

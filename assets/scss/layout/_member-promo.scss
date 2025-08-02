@@ -1,0 +1,22 @@
+.member-promo {
+  background: #d8ff9c;
+
+  text-align: center;
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  gap: 24px;
+  @include rwd(sm) {
+    gap: 16px;
+  }
+}
+
+.member-promo a {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 24px 0 24px 0;
+}
