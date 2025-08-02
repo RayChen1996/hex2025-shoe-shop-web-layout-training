@@ -5,16 +5,29 @@
   margin: 60px auto;
   padding: 0 20px;
 }
-
+.product-banner-mobile {
+  display: none;
+  @include rwd(sm) {
+    display: block;
+  }
+}
 .product-images {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
+  gap: 8px;
+  img {
+    width: 100%;
+  }
 
-.product-images img {
-  width: 100%;
+  @include rwd(sm) {
+    img {
+      display: none;
+    }
+    .product-banner-mobile {
+      display: block;
+    }
+  }
 }
 
 .product-info {
@@ -75,6 +88,26 @@
 
 .size-select {
   margin-bottom: 8px;
+  .sizes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    button {
+      width: 100%;
+      padding: 12px 24px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        border-color: #212529;
+      }
+    }
+    @include rwd(sm) {
+      grid-template-columns: repeat(2, 1fr); // 手機版改為兩欄
+    }
+  }
 }
 
 .color-select .colors .color {
@@ -134,7 +167,18 @@
   margin-top: 48px;
 }
 
-.favorite-btn,
+.favorite-btn {
+  padding: 12px 20px;
+  border: 1px solid #000;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 50%;
+  @include rwd(sm) {
+    width: 100%;
+    display: none;
+  }
+}
 .cart-btn {
   padding: 12px 20px;
   border: 1px solid #000;
@@ -142,6 +186,19 @@
   cursor: pointer;
   border-radius: 4px;
   width: 50%;
+  @include rwd(sm) {
+    width: 100%;
+  }
+}
+.wishlist-btn {
+  padding: 12px 20px;
+  border: 0px;
+  background: white;
+  cursor: pointer;
+  display: none;
+  @include rwd(sm) {
+    display: block;
+  }
 }
 
 .cart-btn {
@@ -166,9 +223,14 @@
 }
 
 .probably-like {
+  h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 2fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     list-style: none;
     a {
@@ -178,12 +240,10 @@
       border-radius: 8px;
       cursor: pointer;
     }
+    @include rwd(sm) {
+      display: none;
+    }
   }
-}
-
-.probably-like h2 {
-  font-style: 24px;
-  margin-bottom: 16px;
 }
 
 @media (max-width: 768px) {
@@ -192,19 +252,8 @@
     gap: 24px;
   }
 
-  .product-images {
-    grid-template-columns: 1fr; // 一欄一張圖
-  }
-
   .sizes {
     grid-template-columns: repeat(2, 1fr); // 排列更適合手機寬度
-  }
-
-  .product-actions {
-    flex-direction: column;
-    button {
-      width: 100%;
-    }
   }
 
   .product-grid {

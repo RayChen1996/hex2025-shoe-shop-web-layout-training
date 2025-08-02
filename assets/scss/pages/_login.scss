@@ -14,22 +14,51 @@
     @media (max-width: 768px) {
       flex-direction: column;
     }
-  }
+    .login-head {
+      flex: 1;
+      .login-pc-bg {
+        height: 100%;
+        background-color: #f2f4f4;
+      }
+    }
+    .login-content {
+      flex: 1;
+      background-color: #f2f4f4;
 
-  .login-head {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
+      border-radius: 8px;
+      text-align: center;
+      padding: 120px 80px;
+      .title {
+        font-size: 28px;
+        @include rwd(sm) {
+          font-size: 24px;
+          margin-top: 0px;
+        }
+      }
+      @include rwd(sm) {
+        background-color: #fff;
+        border-radius: 0px;
 
-  .login-content {
-    flex: 1;
-    background-color: #f2f4f4;
-    padding: 32px;
-    border-radius: 8px;
-    text-align: center;
-    .title {
-      font-size: 24px;
+        width: 100%;
+        padding: 0px;
+
+        .tabs {
+          display: flex;
+          justify-content: center;
+          gap: 16px;
+          border-bottom: 1px solid #ccc;
+          margin-bottom: 32px;
+
+          .tab {
+            cursor: pointer;
+
+            &.active {
+              font-weight: bold;
+              border-bottom: 2px solid #212529;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -67,6 +96,10 @@
       align-items: center;
       gap: 12px;
 
+      @include rwd(sm) {
+        justify-content: start;
+      }
+
       border-color: $Neutral-300;
       background-color: #fff;
       &.facebook {
@@ -100,28 +133,8 @@
         width: 100%;
       }
     }
-    .login-content {
-      border-radius: 0px;
-      text-align: center;
-      background-color: #fff;
-      width: 100%;
-      .tabs {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 32px;
-        margin-top: 24px;
-
-        .tab {
-          cursor: pointer;
-
-          &.active {
-            font-weight: bold;
-            border-bottom: 2px solid #212529;
-          }
-        }
-      }
+    .content {
+      gap: 0;
     }
   }
 }

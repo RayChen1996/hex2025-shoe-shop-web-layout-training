@@ -127,7 +127,10 @@
 }
 
 .section {
-  padding: 80px 0;
+  padding: 64px 0;
+  @include rwd(sm) {
+    padding: 40px 0;
+  }
 }
 
 .section-title {
@@ -141,7 +144,8 @@
 .title {
   font-size: 32px;
   font-weight: 700;
-  margin-top: 64px;
+
+  margin-bottom: 16px;
 }
 
 .section-subtitle {
@@ -157,14 +161,10 @@
 }
 
 .product-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 32px;
   margin-top: 48px;
-}
-
-.product-card {
-  text-align: center;
 }
 
 .product-image {
@@ -177,25 +177,15 @@
   font-size: 20px;
   font-weight: 600;
   margin: 16px 0 8px;
-  color: #000;
+  color: #212529;
 }
 
 .product-price {
   font-weight: 500;
   font-size: 18px;
-  color: #666;
+  color: #212529;
 }
 .container {
-  margin: 0 auto;
-  padding: 2rem;
-  max-width: 1200px;
-
-  .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
   // 熱銷補貨
   .hot-products-grid {
     display: grid;
@@ -247,6 +237,10 @@
       border-radius: 8px;
       padding: 1rem;
       text-align: center;
+      width: calc(50% - 16px);
+      @include rwd(sm) {
+        width: calc(50% - 8px); // 手機時（gap: 16px）
+      }
 
       .product-image {
         width: 100%;

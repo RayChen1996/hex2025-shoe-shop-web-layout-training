@@ -2,18 +2,31 @@
   max-width: 636px;
   margin: 0 auto;
   .title {
+    font-size: 28px;
+    font-weight: 700;
+
+    text-align: center;
     display: flex;
-    gap: 16px;
     justify-content: center;
     align-items: center;
+    gap: 16px;
+    @include rwd(sm) {
+      font-size: 24px;
+      gap: 8px;
+    }
   }
+
   .description {
     display: flex;
     gap: 16px;
     padding: 16px;
+    background-color: #f5fee7;
+    margin-top: 32px;
+    @include rwd(sm) {
+      margin-top: 24px;
+    }
     .text {
       color: #57a203;
-      line-height: 1.5;
     }
   }
 }
@@ -56,6 +69,10 @@
     .price {
       font-weight: bold;
       white-space: nowrap;
+      text-align: right;
+      @include rwd(sm) {
+        text-align: left;
+      }
     }
   }
 }
@@ -68,11 +85,6 @@
     .price {
       margin-top: 8px;
     }
-  }
-
-  .title {
-    flex-direction: column;
-    align-items: center;
   }
 
   .description {
