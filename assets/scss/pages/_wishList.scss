@@ -10,9 +10,11 @@
     justify-content: center;
     align-items: center;
     gap: 16px;
+    margin-top: 64px;
     @include rwd(sm) {
       font-size: 24px;
       gap: 8px;
+      margin-top: 24px;
     }
   }
 
