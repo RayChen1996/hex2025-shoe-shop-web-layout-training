@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 引入 Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <title>產品詳細頁 | 鞋子電商</title>
-    <script type="module" crossorigin src="/hex2025-shoe-shop-web-layout-training/assets/main-DvAUD7IK.js"></script>
-    <link rel="stylesheet" crossorigin href="/hex2025-shoe-shop-web-layout-training/assets/main-CC8hlU3E.css">
+    <script type="module" crossorigin src="/hex2025-shoe-shop-web-layout-training/assets/main-BJk-_x7P.js"></script>
+    <link rel="stylesheet" crossorigin href="/hex2025-shoe-shop-web-layout-training/assets/main-DnsNbIgG.css">
   </head>
   <body>
     <header class="header">
@@ -30,6 +39,11 @@
   </div>
 </header>
     <main>
+      <img
+        src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week2/image.png?raw=true"
+        alt="商品圖片"
+        class="product-banner-mobile"
+      />
       <div class="container">
         <section class="product-detail">
           <div class="product-images">
@@ -129,8 +143,16 @@
             </div>
 
             <div class="product-actions">
-              <button class="favorite-btn">♡ 加入收藏</button>
-              <button class="cart-btn">🛒 加入購物車</button>
+              <button class="favorite-btn">
+                <i class="bi bi-heart"></i> 加入收藏
+              </button>
+              <button class="cart-btn">
+                <i class="bi bi-handbag"></i> 門市預約試穿
+              </button>
+
+              <button class="wishlist-btn">
+                <i class="bi bi-heart"></i>
+              </button>
             </div>
 
             <div class="product-details">
@@ -166,7 +188,7 @@
 
         <!-- 你可能也喜歡 -->
         <section class="probably-like">
-          <h2>你可能也喜歡...</h2>
+          <h3>你可能也喜歡...</h3>
           <ul class="product-grid">
             <li
               class="card"
@@ -217,6 +239,45 @@
               <p class="product-price">NT$4,000</p>
             </li>
           </ul>
+
+          <!-- 手機版 swiper -->
+          <div class="swiper inspiration-swiper mobile-only">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div>
+                  <img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week2/product.png?raw=true"
+                    alt="R:UNER"
+                    class="product-img"
+                  />
+                  <h3 class="product-title">PLATFORM 404</h3>
+                  <p class="product-price">NT$2,600</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week2/product-1.png?raw=true"
+                    alt="R:UNER"
+                    class="product-img"
+                  />
+                  <h3 class="product-title">PLATFORM 404</h3>
+                  <p class="product-price">NT$2,600</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div>
+                  <img
+                    src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week2/product-2.png?raw=true"
+                    alt="R:UNER"
+                    class="product-img"
+                  />
+                  <h3 class="product-title">VM001</h3>
+                  <p class="product-price">NT$2,600</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -239,5 +300,17 @@
   </div>
 </footer>
 
+
+    <script>
+      new Swiper(".inspiration-swiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        breakpoints: {
+          480: {
+            slidesPerView: 2.2,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
