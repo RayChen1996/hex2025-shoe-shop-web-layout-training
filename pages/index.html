@@ -11,6 +11,8 @@
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
 
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <title>首頁 | 鞋子電商</title>
   </head>
@@ -43,7 +45,7 @@
           <span class="section-subtitle">新品上市</span>
         </h2>
         <ul class="product-grid">
-          <li class="product-card">
+          <li data-aos="fade-up" class="product-card">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/new-1.png?raw=true"
               alt="Monoverse 鞋款"
@@ -52,7 +54,7 @@
             <h3 class="product-name">Monoverse</h3>
             <p class="product-price">NT$3,600</p>
           </li>
-          <li class="product-card">
+          <li data-aos="fade-up" class="product-card">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/new-2.png?raw=true"
               alt="Platform 404 鞋款"
@@ -61,7 +63,7 @@
             <h3 class="product-name">PLATFORM 404</h3>
             <p class="product-price">NT$2,600</p>
           </li>
-          <li class="product-card">
+          <li data-aos="fade-up" class="product-card">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/new-3.png?raw=true"
               alt="URBN Force 鞋款"
@@ -70,7 +72,7 @@
             <h3 class="product-name">URBN Force</h3>
             <p class="product-price">NT$3,200</p>
           </li>
-          <li class="product-card">
+          <li data-aos="fade-up" class="product-card">
             <img
               src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/new-4.png?raw=true"
               alt="Mode90 鞋款"
@@ -87,7 +89,7 @@
       <h2 class="title">熱銷補貨</h2>
 
       <ul class="hot-products-grid">
-        <li class="product-card">
+        <li data-aos="fade-up-right" class="product-card">
           <a href="product.html">
             <span class="tag">人氣 No.1</span>
             <img
@@ -97,7 +99,7 @@
             />
           </a>
         </li>
-        <li class="product-card">
+        <li data-aos="fade-up-left" class="product-card">
           <a href="product.html">
             <span class="tag">人氣 No.1</span>
             <img
@@ -117,7 +119,7 @@
             />
           </a>
         </li>
-        <li class="product-card">
+        <li data-aos="fade-up-left" class="product-card">
           <a href="product.html">
             <span class="tag">人氣 No.1</span>
             <img
@@ -348,7 +350,7 @@
     <section class="container section">
       <h2 class="title">依系列選購</h2>
       <ul class="series-products-grid">
-        <li>
+        <li data-aos="flip-left">
           <a href="#">
             <div class="img-mask">
               <img src="/assets/images/index-serios-pd1.png" alt="shoes" />
@@ -360,7 +362,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-aos="flip-right">
           <a href="#">
             <div class="img-mask">
               <img src="/assets/images/index-serios-pd2.png" alt="shoes" />
@@ -372,7 +374,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-aos="flip-left">
           <a href="#">
             <div class="img-mask">
               <img src="/assets/images/index-serios-pd3.png" alt="shoes" />
@@ -384,7 +386,7 @@
             </div>
           </a>
         </li>
-        <li>
+        <li data-aos="flip-right">
           <a href="#">
             <div class="img-mask">
               <img src="/assets/images/index-serios-pd4.png" alt="shoes" />
@@ -406,7 +408,7 @@
 
         <!-- 桌機版 gallery-grid -->
         <div class="gallery-list">
-          <ul class="gallery-row g-8">
+          <ul class="gallery-row g-8" data-aos="fade-up" data-aos-delay="100">
             <li class="gallery--one-third g-8">
               <div class="d-flex g-8">
                 <div class="gallery-item-s">
@@ -563,6 +565,8 @@
           },
         },
       });
+
+      AOS.init();
     </script>
   </body>
 </html>
